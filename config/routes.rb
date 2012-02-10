@@ -4,6 +4,8 @@ DeviseTest::Application.routes.draw do
   devise_for :users
   resources :users
 
+  match 'user' => "users#show", :as => :user_root
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
